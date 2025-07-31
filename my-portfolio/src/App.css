@@ -64,7 +64,7 @@ a:hover {
 }
 
 .navbar-nav a {
-  color: var(--text-color-bright);
+  color: var(--text-color-light);
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -96,6 +96,17 @@ a:hover {
   color: var(--primary-color);
 }
 
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: var(--text-color-light);
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -130,7 +141,7 @@ a:hover {
   font-size: 18px;
   letter-spacing: 2px;
   margin-bottom: 10px;
-  color: var(--text-color-bright);
+  color: var(--text-color-light);
 }
 
 .hero-title {
@@ -144,7 +155,7 @@ a:hover {
 .hero-name {
   font-size: 24px;
   margin-bottom: 30px;
-  color: var(--text-color-bright);
+  color: var(--text-color-light);
 }
 
 .hero-button {
@@ -166,30 +177,7 @@ a:hover {
   color: black;
 }
 
-.hero-pagination {
-  position: absolute;
-  bottom: 40px;
-  left: 10%;
-  z-index: 2;
-  display: flex;
-  gap: 15px;
-}
-
-.hero-pagination span {
-  font-size: 20px;
-  color: var(--text-color-medium);
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.hero-pagination span:first-child {
-  color: var(--primary-color);
-}
-
-.hero-pagination span:hover {
-  color: var(--primary-color);
-}
-
+/* Main Content */
 main {
   padding-top: 80px;
 }
@@ -254,9 +242,10 @@ main {
 
 .content-section ul li:hover {
   transform: translateY(-5px);
-  background-color:red;
+  background-color: red;
 }
 
+/* Projects */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -304,75 +293,7 @@ main {
   background-color: #0097a7;
 }
 
-footer {
-  background-color: #111;
-  color: var(--text-color-medium);
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 16px;
-  margin-top: 0;
-}
-
-@media (max-width: 992px) {
-  .navbar {
-    padding: 15px 30px;
-  }
-  .navbar-nav {
-    display: none;
-  }
-  .navbar-brand {
-    font-size: 24px;
-  }
-  .hero-title {
-    font-size: 45px;
-  }
-  .hero-button {
-    padding: 12px 25px;
-    font-size: 16px;
-  }
-  .content-section {
-    padding: 60px 5%;
-  }
-  .content-section h2 {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-social {
-    display: none;
-  }
-  .navbar {
-    justify-content: center;
-  }
-  #hero {
-    text-align: center;
-    padding-left: 0;
-  }
-  .hero-content {
-    max-width: 90%;
-  }
-  .hero-pagination {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-  }
-  .hero-subtitle {
-    font-size: 16px;
-  }
-  .hero-title {
-    font-size: 35px;
-  }
-  .hero-name {
-    font-size: 20px;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .content-section ul {
-    grid-template-columns: 1fr;
-  }
-}
+/* Contact */
 .contact-container {
   display: flex;
   justify-content: space-between;
@@ -393,14 +314,68 @@ footer {
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
-}
-.hover-section {
-  position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.hover-section:hover {
-  background-color: #f9f9f9;
+/* Footer */
+footer {
+  background-color: #111;
+  color: var(--text-color-medium);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--darker-bg);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    z-index: 1000;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  #hero {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .hero-title {
+    font-size: 35px;
+  }
+
+  .hero-name {
+    font-size: 20px;
+  }
+
+  .content-section ul,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
