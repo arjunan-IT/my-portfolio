@@ -117,15 +117,20 @@ function App() {
               <p><FaGithub /> GitHub: <a href="https://github.com/arjunan-IT" target="_blank" rel="noopener noreferrer">github.com/arjunan-IT</a></p>
             </div>
             <div className="map-container">
-              <h3 style={{ color: '#fff', marginBottom: '10px' }}>📍Kosur, Karur-Tamil Nadu, India</h3>
-              <iframe
-                title="My location"
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d17251.020555092953!2d78.30901316134562!3d10.739872617418227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1753944048764!5m2!1sen!2sin"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+  <h3 style={{ color: '#fff', marginBottom: '10px' }}>
+    📍 Kosur, Karur - Tamil Nadu, India
+  </h3>
+  <iframe
+    title="My location"
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d45335.013271583026!2d78.33568278589199!3d10.74775113177583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1754723037755!5m2!1sen!2sin"
+    width="100%"
+    height="350"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
           </div>
         </section>
       </main>
